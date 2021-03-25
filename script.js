@@ -51,7 +51,7 @@ function iniciarJogo(){
     for(i=1; i < snake.length; i++){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             clearInterval(jogo);
-            alert("Game Over !")
+            alert("Game Over")
         }
     }
 
@@ -74,11 +74,9 @@ function iniciarJogo(){
         food.y = Math.floor(Math.random() * 15 + 1)* box;
     }
 
-    snake.pop();
-
     let newHead = {
         x: snakeX,
-        y: snakeY,
+        y: snakeY
     }
 
     snake.unshift(newHead);
